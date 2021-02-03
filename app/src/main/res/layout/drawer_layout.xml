@@ -1,0 +1,174 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/header_drawer"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:src="@drawable/logo"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/exp_home_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_home"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_drawer" />
+
+    <TextView
+        android:id="@+id/exp_home_tetxtview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/exp_home_menu"
+        android:paddingLeft="?android:attr/expandableListPreferredItemPaddingLeft"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/exp_home_imageView"
+        app:layout_constraintStart_toEndOf="@+id/exp_home_imageView"
+        app:layout_constraintTop_toTopOf="@+id/exp_home_imageView" />
+
+    <ImageView
+        android:id="@+id/exp_movie_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/ic_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/exp_home_imageView" />
+
+    <TextView
+        android:id="@+id/exp_movie_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="?android:attr/expandableListPreferredItemPaddingLeft"
+        android:text="@string/exp_movie_menu"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/exp_movie_imageView"
+        app:layout_constraintStart_toEndOf="@+id/exp_movie_imageView"
+        app:layout_constraintTop_toTopOf="@+id/exp_movie_imageView" />
+
+    <ImageView
+        android:id="@+id/exp_shows_imageView"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_tv_series"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/exp_movie_imageView"/>
+
+    <TextView
+        android:id="@+id/exp_shows_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="?android:attr/expandableListPreferredItemPaddingLeft"
+        android:text="@string/exp_shows_menu"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/exp_shows_imageView"
+        app:layout_constraintStart_toEndOf="@+id/exp_shows_imageView"
+        app:layout_constraintTop_toTopOf="@+id/exp_shows_imageView" />
+
+    <ImageView
+        android:id="@+id/exp_favorite_imageView"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_favorite"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/exp_shows_imageView" />
+
+    <TextView
+        android:id="@+id/exp_favorite_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="?android:attr/expandableListPreferredItemPaddingLeft"
+        android:text="@string/exp_favorite_menu"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/exp_favorite_imageView"
+        app:layout_constraintStart_toEndOf="@+id/exp_favorite_imageView"
+        app:layout_constraintTop_toTopOf="@+id/exp_favorite_imageView" />
+
+    <ImageView
+        android:id="@+id/exp_search_imageView"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_discover"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/exp_favorite_imageView" />
+
+    <TextView
+        android:id="@+id/exp_search_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="?android:attr/expandableListPreferredItemPaddingLeft"
+        android:text="@string/exp_search_menu"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/exp_search_imageView"
+        app:layout_constraintStart_toEndOf="@+id/exp_search_imageView"
+        app:layout_constraintTop_toTopOf="@+id/exp_search_imageView"/>
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#c0c0c0"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/exp_search_textview" />
+
+    <ImageView
+        android:id="@+id/exp_credits_imageView"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_descrption"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/separator" />
+
+    <TextView
+        android:id="@+id/exp_credits_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="?android:attr/expandableListPreferredItemPaddingLeft"
+        android:text="@string/exp_credits_menu"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/exp_credits_imageView"
+        app:layout_constraintStart_toEndOf="@+id/exp_credits_imageView"
+        app:layout_constraintTop_toTopOf="@+id/exp_credits_imageView"/>
+
+    <ExpandableListView
+        android:layout_marginTop="16dp"
+        android:id="@+id/lvExp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/exp_credits_textview" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

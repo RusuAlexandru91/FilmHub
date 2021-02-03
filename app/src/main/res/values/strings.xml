@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">FilmHub</string>
+    // Strings for movies category
+    <string name="shows_category">Shows</string>
+    <string name="movies_category">Movies</string>
+
+    // Strings for Tv series Category
+    <string name="popular_category_series">Popular Tv series</string>
+    <string name="rated_category_series">Top rated Tv series</string>
+    <string name="newest_category_series">Newest Tv series</string>
+
+    // Strings for horzontal card view
+    <string name="title_horizontal_card_view">Title of the movie</string>
+    <string name="date_horizontal_card_view">Published date </string>
+
+    // String for view all buttons
+    <string name="viewall">See All</string>
+
+    //Drawer Strings
+    <string name="open_drawer">Open</string>
+    <string name="close_drawer">Close</string>
+
+    // Exp List Strings
+    <string name="exp_home_menu">Home</string>
+    <string name="exp_movie_menu">Movie</string>
+    <string name="exp_shows_menu">Shows</string>
+    <string name="exp_favorite_menu">Favorite</string>
+    <string name="exp_search_menu">Discover</string>
+    <string name="exp_credits_menu">Credits</string>
+
+    //Settings
+    <string name="settings_menu_item">Settings</string>
+    <string name="genre_menu_item">Genra</string>
+    <string name="search_menu_item">Search</string>
+    <string name="discover_menu_item">Discover</string>
+    <string name="favorites_menu_item">Favorites</string>
+    <string name="settings_title">FilmHub Settings</string>
+    <string name="discover_body">Pick your options from settings</string>
+
+    // Discover
+
+
+
+    <string name="duration_title">Duration : </string>
+    <string name="date_title">Date : </string>
+    <string name="similar_title">Similar</string>
+    <string name="overview_title">Overview</string>
+    <string name="cast_title">Cast</string>
+    <string name="smilar_title">Similar</string>
+    <string name="overview_content">"Line 1 of description"\n"Line 2 of description"\n"Line 3 of description"\n"Line 4 of description"</string>
+
+</resources>

@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.andoid.filmhub.DiscoverActivity">
+    <item
+        android:id="@+id/discover_settings"
+        android:title="@string/discover_menu_item"
+        android:icon="@drawable/ic_discover"
+        android:orderInCategory="1"
+        app:showAsAction="ifRoom" />
+</menu>
