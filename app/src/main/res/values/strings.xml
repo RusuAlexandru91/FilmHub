@@ -1,5 +1,13 @@
 <resources>
     <string name="app_name">FilmHub</string>
+    <string name="placeholder_text">PlaceHolder</string>
+    <string name="favoriteTitleTextView">Title of the item saved</string>
+    <string name="realNameTextView">Real Name</string>
+    <string name="actorNameTextView">Actor Name</string>
+    <string name="swipeToDeleteText">Swipe left to delete</string>
+    <string name="noRateig">No rateing</string>
+
+
     // Strings for movies category
     <string name="shows_category">Shows</string>
     <string name="movies_category">Movies</string>
@@ -37,16 +45,145 @@
     <string name="settings_title">FilmHub Settings</string>
     <string name="discover_body">Pick your options from settings</string>
 
-    // Discover
-
-
-
-    <string name="duration_title">Duration : </string>
-    <string name="date_title">Date : </string>
+    // Details
+    <string name="info_title"> </string>
+    <string name="date_title">Date :</string>
     <string name="similar_title">Similar</string>
     <string name="overview_title">Overview</string>
+    <string name="trailer_title">Trailer</string>
     <string name="cast_title">Cast</string>
     <string name="smilar_title">Similar</string>
-    <string name="overview_content">"Line 1 of description"\n"Line 2 of description"\n"Line 3 of description"\n"Line 4 of description"</string>
+    <string name="duration_title">Duration</string>
+    <string name="minutes_title">Min</string>
+    <string name="time_divider_title">H : \u0020</string>
+    <string name="overview_content">"No overview available"</string>
+    <string name="release_date_title">Release date : \u0020</string>
+    <string name="buget_title">Buget : \u0020</string>
+    <string name="seasons_title">Seasons :\u0020 </string>
+    <string name="episodes_title">Episodes :\u0020</string>
+    <string name="status_title">Status : \u0020</string>
+    <string name="first_episode_date">First episode realease date : \u0020</string>
+    <string name="last_episode_date">Last episode realease date : \u0020</string>
+    <string name="tagline_title">Tagline : \u0020</string>
 
+    // Dialog
+    <string name="dialog_warning">Warning</string>
+    <string name="dialog_warning_title">No internet Connection</string>
+    <string name="dialog_warning_message">Some features might not work as expected due to low internet speed or no connectivity.\n\n Please check your connection !</string>
+    <string name="dialog_warning_button">Continue</string>
+    <string name="error_message">Someting went wrong!\n Swipe to refresh </string>
+
+    // Search
+    <string name="search_error_text">No results found.\n Please try a different title</string>
+    <string name="favorite_error_text">List is empty. \n Start by adding new titles</string>
+
+    // Discover Order Strings
+    <string name="discover_error_text">No data to be displayed .\n Please pick other options from settings</string>
+    <string name="settings_order_by_default_movies" translatable="false">@string/settings_order_by_popularity_value_movies</string>
+    <string name="settings_order_by_popularity_value_movies" translatable="false">popularity.desc</string>
+    <string name="settings_order_by_default_shows" translatable="false">@string/settings_order_by_popularity_value_shows</string>
+    <string name="settings_order_by_popularity_value_shows" translatable="false">popularity.desc</string>
+    <string name="settings_order_by_key_movies" translatable="false">sort_by_Movies</string>
+    <string name="settings_order_by_key_shows" translatable="false">sort_by_Shows</string>
+    <string name="settings_order_by_label">ORDER BY</string>
+    <string name="settings_order_by_label_shows">ORDER BY</string>
+    <string name="settings_order_by_popularity_label">Popularity</string>
+    <string name="settings_order_by_vote_label">Vote</string>
+
+    <string name="settings_order_by_vote_value_movies" translatable="false">vote_average.desc</string>
+    <string name="settings_order_by_vote_value_shows" translatable="false">vote_average.desc</string>
+
+    // Discover Year Strings
+    <string name="settings_min_number_default_movies" translatable="false">2021</string>
+    <string name="settings_min_number_default_shows" translatable="false">2021</string>
+    <string name="settings_min_number_key_movies" translatable="false">numberMovies</string>
+    <string name="settings_min_number_key_shows" translatable="false">numberShows</string>
+    <string name="settings_min_number_label">SORT BY YEAR</string>
+    <string name="settings_min_number_label_shows">SORT BY YEAR</string>
+    <string name="settings_year_key" translatable="false">year</string>
+
+    // Discover movie genres Strings
+    <string name="settings_category_by_default_movies" translatable="false">"28"</string>
+    <string name="settings_category_by_key_movies" translatable="false">with_genres_movies</string>
+    <string name="settings_category_by_label">SORT BY GENRES</string>
+    <string name="settings_category_by_label_shows">SORT BY GENRES</string>
+    <string name="settings_category_by_action_label">Action</string>
+    <string name="settings_category_by_action_value" translatable="false">28</string>
+    <string name="settings_category_by_adventure_label">Adventure</string>
+    <string name="settings_category_by_adventure_value" translatable="false">12</string>
+    <string name="settings_category_by_fantasy_label">Fantasy</string>
+    <string name="settings_category_by_fantasy_value" translatable="false">14</string>
+    <string name="settings_category_by_history_label">History</string>
+    <string name="settings_category_by_history_value" translatable="false">36</string>
+    <string name="settings_category_by_horror_label">Horror</string>
+    <string name="settings_category_by_horror_value" translatable="false">27</string>
+    <string name="settings_category_by_music_label">Music</string>
+    <string name="settings_category_by_music_value" translatable="false">10402</string>
+    <string name="settings_category_by_romance_label">Romance</string>
+    <string name="settings_category_by_romance_value" translatable="false">10749</string>
+    <string name="settings_category_by_sf_label">Science Fiction</string>
+    <string name="settings_category_by_sf_value" translatable="false">878</string>
+    <string name="settings_category_by_tvmovie_label">Tv Movie</string>
+    <string name="settings_category_by_tvmovie_value" translatable="false">10770</string>
+    <string name="settings_category_by_thriller_label">Thriller</string>
+    <string name="settings_category_by_thriller_value" translatable="false">53</string>
+    <string name="settings_category_by_western_label">Western</string>
+    <string name="settings_category_by_western_value" translatable="false">37</string>
+
+    // Discover common genres Strings
+    <string name="settings_category_by_animation_label">Animation</string>
+    <string name="settings_category_by_animation_value" translatable="false">16</string>
+    <string name="settings_category_by_comedy_label">Comedy</string>
+    <string name="settings_category_by_comedy_value" translatable="false">35</string>
+    <string name="settings_category_by_crime_label">Crime</string>
+    <string name="settings_category_by_crime_value" translatable="false">80</string>
+    <string name="settings_category_by_documentary_label">Documentary</string>
+    <string name="settings_category_by_documentary_value" translatable="false">99</string>
+    <string name="settings_category_by_drama_label">Drama</string>
+    <string name="settings_category_by_drama_value" translatable="false">18</string>
+    <string name="settings_category_by_family_label">Family</string>
+    <string name="settings_category_by_family_value" translatable="false">10751</string>
+    <string name="settings_category_by_mistery_label">Mystery</string>
+    <string name="settings_category_by_mistery_value" translatable="false">9648</string>
+    <string name="settings_category_by_war_label">War</string>
+    <string name="settings_category_by_war_value" translatable="false">10752</string>
+
+   // Discover Shows genres Strings
+    <string name="settings_category_by_default_shows" translatable="false">10759</string>
+    <string name="settings_category_by_key_shows" translatable="false">with_genres_shows</string>
+    <string name="settings_category_by_action_adventure_label">Action and Adventure</string>
+    <string name="settings_category_by_action_adventure_value" translatable="false">10759</string>
+    <string name="settings_category_by_kids_label">Kids</string>
+    <string name="settings_category_by_kids_value" translatable="false">10762</string>
+    <string name="settings_category_by_news_label">News</string>
+    <string name="settings_category_by_news_value" translatable="false">10763</string>
+    <string name="settings_category_by_reality_label" translatable="false">10764</string>
+    <string name="settings_category_by_sf_fantasy_label">Reality</string>
+    <string name="settings_category_by_reality_value">Sci-Fi and Fantasy</string>
+    <string name="settings_category_by_sf_fantasy_value" translatable="false">10765</string>
+    <string name="settings_category_by_soap_label">Soap</string>
+    <string name="settings_category_by_soap_value" translatable="false">10766</string>
+    <string name="settings_category_by_talk_label">Talk</string>
+    <string name="settings_category_by_talk_value" translatable="false">10767</string>
+    <string name="settings_category_by_war_politics_label">War and Politics</string>
+    <string name="settings_category_by_war_politics_value" translatable="false">10768</string>
+
+    //Descriptions
+    <string name="imageHeader_details_description">Header image for selected item</string>
+    <string name="back_button_details_description">Back button</string>
+    <string name="floatingActionButton_details_description">Add selected title to favorites</string>
+    <string name="score_imageView_details_description">Star image falowed by rateing</string>
+    <string name="trailer_imageView_details_description">Backdrop of the title</string>
+    <string name="trailer_imageView_playbtn_details_description">Clickable play button to start youtube trailer for the title</string>
+    <string name="imageView_splashScreen_description">SplashScreen image</string>
+    <string name="drawerHeaderImageView_drawerLayout_description">Drawer header image logo</string>
+    <string name="expandableMoviesImageView_drawerLayout_description">Movies menu icon</string>
+    <string name="expandableShowsImageView_drawerLayout_description">Shows menu icon</string>
+    <string name="expandableFavoriteImageView_drawerLayout_description">Favorite menu icon</string>
+    <string name="expandableCreditsImageView_drawerLayout_description">Credits menu icon</string>
+    <string name="expandableMainIconImageView_drawerLayout_description">Expandable menu icon</string>
+    <string name="recyclerLayoutImageView_recyclerLayout_description">Image of movie/show</string>
+    <string name="favoriteTitleImageView_recyclerLayoutdb_description">Image of movie/show</string>
+    <string name="expandableContentCollapseButton_recyclerLayoutdb_description">Button to extend discription</string>
+    <string name="warningHeaderImageIcon_splashError_description">Warning message icon</string>
 </resources>

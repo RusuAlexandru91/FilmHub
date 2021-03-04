@@ -37,6 +37,8 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
+    // Expanding textview
+    compile 'com.ms-square:expandableTextView:0.1.4'
     //Glide
     implementation 'com.github.bumptech.glide:glide:4.11.0'
     // Cardview
@@ -62,4 +64,15 @@ dependencies {
     implementation 'de.hdodenhof:circleimageview:3.1.0'
     // Activity animation
     implementation 'com.github.mohammadatif:Animatoo:master'
+    // Room
+    def room_version = "2.2.5"
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+    implementation "androidx.room:room-rxjava2:$room_version"
+    implementation "androidx.room:room-guava:$room_version"
+    testImplementation "androidx.room:room-testing:$room_version"
+    // lottie
+    implementation 'com.airbnb.android:lottie:3.6.0'
+    // SwiperRefresh
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.0.0'
 }

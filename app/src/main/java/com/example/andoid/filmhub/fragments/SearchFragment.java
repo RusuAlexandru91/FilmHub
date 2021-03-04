@@ -1,29 +1,23 @@
 package com.example.andoid.filmhub.fragments;
 
-import android.app.ActionBar;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.andoid.filmhub.ContainerActivity;
-import com.example.andoid.filmhub.MainActivity;
 import com.example.andoid.filmhub.R;
 import com.example.andoid.filmhub.adapters.TabAdapter;
 import com.google.android.material.tabs.TabLayout;
 
-public class SearchFragment extends Fragment {
+import java.util.Objects;
 
-    private TabAdapter adapter;
-    private TabLayout tableLayout;
-    private ViewPager viewPager;
+public class SearchFragment extends Fragment {
 
 
     @Nullable
@@ -33,22 +27,35 @@ public class SearchFragment extends Fragment {
 
 
         // Finding the Views
-        viewPager = view.findViewById(R.id.category_pager);
-        tableLayout = view.findViewById(R.id.category_tabs);
+        ViewPager viewPager = view.findViewById(R.id.pagerCategory);
+        TabLayout tableLayout = view.findViewById(R.id.tabsCategory);
 
-        adapter = new TabAdapter(getFragmentManager());
+        TabAdapter adapter = new TabAdapter(getFragmentManager());
 
-        adapter.addFragment(new SearchContentFragment(), "Movies");
-        adapter.addFragment(new SearchContentFragment(), "Shows");
+        SearchContentFragment searchMovieFragment = fragmentBundleGenerator(1);
+        SearchContentFragment searchShowsFragment = fragmentBundleGenerator(2);
+
+        adapter.addFragment(searchMovieFragment, "Movies");
+        adapter.addFragment(searchShowsFragment, "Shows");
 
         viewPager.setAdapter(adapter);
         tableLayout.setupWithViewPager(viewPager);
-
         return view;
+
     }
     @Override
     public void onResume() {
         super.onResume();
-        ((ContainerActivity) getActivity()).setActionBarTitle("Search");
+        // Setting the action bar title
+        ((ContainerActivity) Objects.requireNonNull(getActivity())).setActionBarTitle("Search");
+    }
+
+    private SearchContentFragment fragmentBundleGenerator(int searchType){
+        // Generate a Bundle so we know how to populate the fragments
+        SearchContentFragment searchContentFragment = new SearchContentFragment();
+        Bundle bundleCategory = new Bundle();
+        bundleCategory.putInt("searchType", searchType);
+        searchContentFragment.setArguments(bundleCategory);
+        return searchContentFragment;
     }
 }

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="settings_order_by_labels_movies">
+        <item>@string/settings_order_by_popularity_label</item>
+        <item>@string/settings_order_by_vote_label</item>
+    </string-array>
+    <string-array name="settings_order_by_labels_shows">
+        <item>@string/settings_order_by_popularity_label</item>
+        <item>@string/settings_order_by_vote_label</item>
+    </string-array>
+    <string-array name="settings_order_by_values_movies">
+        <item>@string/settings_order_by_popularity_value_movies</item>
+        <item>@string/settings_order_by_vote_value_movies</item>
+    </string-array>
+
+    <string-array name="settings_order_by_values_shows">
+        <item>@string/settings_order_by_popularity_value_shows</item>
+        <item>@string/settings_order_by_vote_value_shows</item>
+    </string-array>
+
+    <string-array name="settings_category_by_labels_movies">
+        <item>@string/settings_category_by_action_label</item>
+        <item>@string/settings_category_by_adventure_label</item>
+        <item>@string/settings_category_by_animation_label</item>
+        <item>@string/settings_category_by_comedy_label</item>
+        <item>@string/settings_category_by_crime_label</item>
+        <item>@string/settings_category_by_documentary_label</item>
+        <item>@string/settings_category_by_drama_label</item>
+        <item>@string/settings_category_by_family_label</item>
+        <item>@string/settings_category_by_fantasy_label</item>
+        <item>@string/settings_category_by_history_label</item>
+        <item>@string/settings_category_by_horror_label</item>
+        <item>@string/settings_category_by_music_label</item>
+        <item>@string/settings_category_by_mistery_label</item>
+        <item>@string/settings_category_by_romance_label</item>
+        <item>@string/settings_category_by_sf_label</item>
+        <item>@string/settings_category_by_tvmovie_label</item>
+        <item>@string/settings_category_by_thriller_label</item>
+        <item>@string/settings_category_by_war_label</item>
+        <item>@string/settings_category_by_western_label</item>
+    </string-array>
+    <string-array name="settings_category_by_values_movies">
+        <item>@string/settings_category_by_action_value</item>
+        <item>@string/settings_category_by_adventure_value</item>
+        <item>@string/settings_category_by_animation_value</item>
+        <item>@string/settings_category_by_comedy_value</item>
+        <item>@string/settings_category_by_crime_value</item>
+        <item>@string/settings_category_by_documentary_value</item>
+        <item>@string/settings_category_by_drama_value</item>
+        <item>@string/settings_category_by_family_value</item>
+        <item>@string/settings_category_by_fantasy_value</item>
+        <item>@string/settings_category_by_history_value</item>
+        <item>@string/settings_category_by_horror_value</item>
+        <item>@string/settings_category_by_music_value</item>
+        <item>@string/settings_category_by_mistery_value</item>
+        <item>@string/settings_category_by_romance_value</item>
+        <item>@string/settings_category_by_sf_value</item>
+        <item>@string/settings_category_by_tvmovie_value</item>
+        <item>@string/settings_category_by_thriller_value</item>
+        <item>@string/settings_category_by_war_value</item>
+        <item>@string/settings_category_by_western_value</item>
+    </string-array>
+
+    <string-array name="settings_category_by_labels_shows">
+        <item>@string/settings_category_by_action_adventure_label</item>
+        <item>@string/settings_category_by_animation_label</item>
+        <item>@string/settings_category_by_comedy_label</item>
+        <item>@string/settings_category_by_crime_label</item>
+        <item>@string/settings_category_by_documentary_label</item>
+        <item>@string/settings_category_by_drama_label</item>
+        <item>@string/settings_category_by_family_label</item>
+        <item>@string/settings_category_by_kids_label</item>
+        <item>@string/settings_category_by_mistery_label</item>
+        <item>@string/settings_category_by_news_label</item>
+        <item>@string/settings_category_by_reality_label</item>
+        <item>@string/settings_category_by_sf_fantasy_label</item>
+        <item>@string/settings_category_by_soap_label</item>
+        <item>@string/settings_category_by_talk_label</item>
+        <item>@string/settings_category_by_war_politics_label</item>
+        <item>@string/settings_category_by_western_label</item>
+    </string-array>
+         <string-array name="settings_category_by_values_shows">
+         <item>@string/settings_category_by_action_adventure_value</item>
+         <item>@string/settings_category_by_animation_value</item>
+         <item>@string/settings_category_by_comedy_value</item>
+         <item>@string/settings_category_by_crime_value</item>
+         <item>@string/settings_category_by_documentary_value</item>
+         <item>@string/settings_category_by_drama_value</item>
+         <item>@string/settings_category_by_family_value</item>
+         <item>@string/settings_category_by_kids_value</item>
+         <item>@string/settings_category_by_mistery_value</item>
+         <item>@string/settings_category_by_news_value</item>
+         <item>@string/settings_category_by_reality_value</item>
+         <item>@string/settings_category_by_sf_fantasy_value</item>
+         <item>@string/settings_category_by_soap_value</item>
+         <item>@string/settings_category_by_talk_value</item>
+         <item>@string/settings_category_by_war_politics_value</item>
+         <item>@string/settings_category_by_western_value</item>
+    </string-array>
+
+</resources>

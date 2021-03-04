@@ -1,129 +1,166 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/details_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/bar_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/bar_layout"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
         <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/toolbarTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
             app:contentScrim="@color/colorAccent"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
             app:title="FilmHub colapse ">
+
             <ImageView
+                android:id="@+id/imageHeader"
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
-                android:src="@drawable/mock4"
-                android:scaleType="centerCrop"/>
+                android:contentDescription="@string/imageHeader_details_description"
+                android:scaleType="centerCrop"
+                android:src="@drawable/image_placeholder" />
+
             <androidx.appcompat.widget.Toolbar
-                android:id="@+id/mainToolbar"
+                android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
-                app:layout_collapseMode="pin"/>
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Dark" />
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
+
     <ImageView
         android:id="@+id/back_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_back"
-        android:layout_margin="16dp"/>
+        android:layout_margin="16dp"
+        android:contentDescription="@string/back_button_details_description"
+        android:src="@drawable/ic_back" />
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton3"
+        android:id="@+id/floatingActionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
         android:clickable="true"
-        app:srcCompat="@drawable/ic_favorite_empty"
+        android:contentDescription="@string/floatingActionButton_details_description"
+        android:focusable="true"
+        app:backgroundTint="@color/colorAccent"
         app:layout_anchor="@id/bar_layout"
         app:layout_anchorGravity="bottom|right|end"
-        android:layout_marginEnd="32dp"/>
+        app:srcCompat="@drawable/ic_favorite_empty" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        android:layout_marginBottom="16dp">
+        android:layout_marginBottom="16dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_marginTop="8dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
             <ImageView
                 android:id="@+id/score_imageView"
                 android:layout_width="18dp"
                 android:layout_height="18dp"
                 android:layout_margin="8dp"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+                android:contentDescription="@string/score_imageView_details_description"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_star" />
 
             <TextView
-                android:id="@+id/score_textView"
+                android:id="@+id/vote_average_textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:text="9.2"
+                android:text=""
                 app:layout_constraintBottom_toBottomOf="@+id/score_imageView"
                 app:layout_constraintStart_toEndOf="@+id/score_imageView"
                 app:layout_constraintTop_toTopOf="@+id/score_imageView" />
 
             <TextView
-                android:id="@+id/duration_textView"
+                android:id="@+id/information_placeholder"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:text="@string/duration_title"
+                android:text="@string/info_title"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/score_imageView" />
 
             <TextView
-                android:id="@+id/duration_variable_textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1h : 40m"
-                app:layout_constraintBottom_toBottomOf="@+id/duration_textView"
-                app:layout_constraintStart_toEndOf="@+id/duration_textView"
-                app:layout_constraintTop_toTopOf="@+id/duration_textView" />
-
-            <TextView
-                android:id="@+id/date_textView"
+                android:id="@+id/information_placeholder2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:text="@string/date_title"
-                app:layout_constraintBottom_toBottomOf="@+id/duration_variable_textView"
-                app:layout_constraintEnd_toStartOf="@+id/date_variable_date"
-                app:layout_constraintTop_toTopOf="@+id/duration_variable_textView" />
+                android:text="@string/info_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/information_placeholder" />
 
             <TextView
-                android:id="@+id/date_variable_date"
+                android:id="@+id/information_placeholder3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:text="25.01.2020"
-                app:layout_constraintBottom_toBottomOf="@+id/date_textView"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/date_textView" />
+                android:text="@string/info_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/information_placeholder2" />
+
+            <TextView
+                android:id="@+id/episodes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="@string/info_title"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/information_placeholder3" />
+
+            <TextView
+                android:id="@+id/information_placeholder4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="@string/info_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/episodes" />
+
+            <TextView
+                android:id="@+id/information_placeholder5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="@string/info_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/information_placeholder4" />
 
             <TextView
                 android:id="@+id/genders_textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:text="Action | Comedy | Aventure"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:text=""
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/date_textView" />
+                app:layout_constraintTop_toBottomOf="@+id/information_placeholder5" />
 
             <View
-                android:id="@+id/separator"
+                android:id="@+id/overviewSeparator"
                 android:layout_width="wrap_content"
                 android:layout_height="1dp"
                 android:layout_margin="8dp"
@@ -131,97 +168,114 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/genders_textView" />
+
             <TextView
-                android:id="@+id/overview_textView"
+                android:id="@+id/overviewTitleTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:text="@string/overview_title"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/separator" />
+                app:layout_constraintTop_toBottomOf="@+id/overviewSeparator" />
 
             <TextView
-                android:id="@+id/textView9"
+                android:id="@+id/overviewContentTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
+                android:padding="8dp"
                 android:text="@string/overview_content"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/overview_textView" />
+                app:layout_constraintTop_toBottomOf="@+id/overviewTitleTextView" />
 
             <View
-                android:id="@+id/separator2"
+                android:id="@+id/trailerSeparator"
                 android:layout_width="wrap_content"
                 android:layout_height="1dp"
                 android:layout_margin="8dp"
                 android:background="@color/white_gray"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView9" />
-
-            <ImageView
-                android:id="@+id/trailer_imageView"
-                android:src="@drawable/video_placeholder"
-                android:layout_width="150dp"
-                android:layout_height="100dp"
-                android:layout_margin="8dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/separator2"
-                tools:srcCompat="@tools:sample/avatars" />
-
-            <View
-                android:id="@+id/separator3"
-                android:layout_width="wrap_content"
-                android:layout_height="1dp"
-                android:layout_margin="8dp"
-                android:background="@color/white_gray"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/trailer_imageView"/>
+                app:layout_constraintTop_toBottomOf="@+id/overviewContentTextView" />
 
             <TextView
-                android:id="@+id/cast_textView"
+                android:id="@+id/trailerTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="@string/trailer_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/trailerSeparator" />
+
+            <ImageView
+                android:id="@+id/trailerImageView"
+                android:layout_width="150dp"
+                android:layout_height="85dp"
+                android:layout_margin="8dp"
+                android:contentDescription="@string/trailer_imageView_details_description"
+                android:src="@drawable/image_placeholder"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/trailerTitleTextView" />
+
+            <ImageView
+                android:id="@+id/trailerImageViewPlay"
+                android:layout_width="150dp"
+                android:layout_height="85dp"
+                android:layout_margin="8dp"
+                android:background="#99808080"
+                android:contentDescription="@string/trailer_imageView_playbtn_details_description"
+                android:padding="20dp"
+                android:src="@drawable/ic_playbtn"
+                app:layout_constraintBottom_toBottomOf="@+id/trailerImageView"
+                app:layout_constraintEnd_toEndOf="@+id/trailerImageView"
+                app:layout_constraintStart_toStartOf="@+id/trailerImageView"
+                app:layout_constraintTop_toTopOf="@+id/trailerImageView" />
+
+            <View
+                android:id="@+id/castSeparator"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_margin="8dp"
+                android:background="@color/white_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/trailerImageView" />
+
+            <TextView
+                android:id="@+id/castTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:text="@string/cast_title"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/trailer_imageView" />
+                app:layout_constraintTop_toBottomOf="@+id/castSeparator" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerView_cast"
+                android:id="@+id/recyclerViewCast"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/separator3" />
+                app:layout_constraintTop_toBottomOf="@+id/castTextView" />
 
-            <TextView
-                android:id="@+id/similar_textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:text="@string/similar_title"
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottieLoadingAnimation"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/recyclerView_cast" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerView_similar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/similar_textView" />
-
-
+                app:layout_constraintTop_toTopOf="parent"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="loading.json"
+                app:lottie_loop="true" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

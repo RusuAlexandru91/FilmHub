@@ -7,21 +7,20 @@
     tools:context=".ContainerActivity">
 
     <FrameLayout
+        android:id="@+id/container_categories"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/container_categories"/>
+        android:layout_height="wrap_content" />
 
     <com.etebarian.meowbottomnavigation.MeowBottomNavigation
+        android:id="@+id/navigation_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
         app:mbn_backgroundBottomColor="#000000"
         app:mbn_circleColor="#FFFFFF"
         app:mbn_defaultIconColor="#FFFFFF"
         app:mbn_selectedIconColor="#000000"
-        app:mbn_shadowColor="@color/colorAccent"
-        android:id="@+id/navigation_bar"
-        android:layout_gravity="bottom">
-    </com.etebarian.meowbottomnavigation.MeowBottomNavigation>
+        app:mbn_shadowColor="@color/colorAccent"/>
 
 </FrameLayout>
 

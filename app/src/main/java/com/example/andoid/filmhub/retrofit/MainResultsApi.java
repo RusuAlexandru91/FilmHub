@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public class ObjectApi {
+public class MainResultsApi {
 
     @SerializedName("page")
     int currentPage;
@@ -13,12 +13,13 @@ public class ObjectApi {
     int totalPages;
 
     @SerializedName("results")
-    List<ArrayApi> results;
+    List<MainDetailsApi> results;
 
-    public ObjectApi(int currentPage, int totalPages, List<ArrayApi> results) {
+    public MainResultsApi(int currentPage, int totalPages, List<MainDetailsApi> results) {
         this.currentPage = currentPage;
         this.totalPages = totalPages;
         this.results = results;
+
     }
 
     public int getCurrentPage() {
@@ -29,7 +30,8 @@ public class ObjectApi {
         return totalPages;
     }
 
-    public List<ArrayApi> getResults() {
+    public List<MainDetailsApi> getResults() {
         return results;
     }
+
 }
